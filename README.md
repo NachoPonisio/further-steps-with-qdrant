@@ -9,8 +9,7 @@ Here are the main starter directories and files in this repo:
 ├── tasks/
 │   ├── task_1.md
 │   ├── task_2.md
-│   ├── task_3.md
-│   └── task_4.md
+│   └── task_3.md
 ├── dataset/
 ├── README.md
 └── .gitignore

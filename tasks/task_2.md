@@ -1,6 +1,6 @@
 # Balance the search
 
-In the previous stage, we have observed the differences between k-NN and the approximate search. Let's see how we can impact the search by changing one of the search parameters, `hnsw_ef`, without modifying the index or the underlying embeddings (just yet).
+In the previous stage, we have observed the differences between k-NN and the approximate search. Let's see how we can impact the search by changing one of the search parameters, `hnsw_ef`, without modifying the index or the underlying embeddings.
 
 ## Theory
 

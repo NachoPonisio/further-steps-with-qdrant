@@ -1,24 +1,8 @@
 # Quantization
-Before starting this task, adjust and run the following snippet to reset the HNSW config parameters to their default values (since the quantization will interact with the HNSW config parameters and it will affect the speed and the search accuracy):
-
-```
-client.update_collection(
-     collection_name=COLLECTION_NAME,
-     hnsw_config=models.HnswConfigDiff(
-        m=16,
-        ef_construct=100,
-     )
-)
-
-while True:
-    collection_info = client.get_collection(collection_name=COLLECTION_NAME)
-    if collection_info.status == models.CollectionStatus.GREEN:
-        break
-```
-
-## Theory
 
 Quantization is a way to reduce the precision of high-dimensional vectors to make the database more efficient in terms of storage and inference speed. It involves converting floating-point numbers to lower-precision types and trying to compress the vectors without loosing too much accuracy.
+
+## Theory
 
 Qdrant supports 3 types of quantization out of the box (meaning that you don't have to preprocess the embeddings separately, and can quantize them inside of Qdrant itself, and also store the quantized vectors alongside the original ones without much configuration). Here are their brief descriptions:
 

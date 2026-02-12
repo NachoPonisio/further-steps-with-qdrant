@@ -1,0 +1,23 @@
+[project]
+name = "further-steps-with-qdrant"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Ignacio Ponisio",email = "ponisio.ignacio@gmail.com"}
+]
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "qdrant-client (>=1.16.2,<2.0.0)",
+    "dotenv (>=0.9.9,<0.10.0)"
+]
+[tool.poetry]
+packages = [{include = "tasks"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+task-1 = "tasks.task_1.main:run"

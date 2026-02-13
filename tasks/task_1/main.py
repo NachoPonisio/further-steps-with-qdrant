@@ -40,7 +40,10 @@ def get_knn(emb: List[float], top_k: int = k, collection_name: str = COLLECTION_
         query=emb,
         collection_name=collection_name,
         limit=top_k,
-        search_params=models.SearchParams(exact=True)
+        search_params=models.SearchParams(
+            exact=True,
+            quantization=models.QuantizationSearchParams(ignore=True)
+        )
     ).points
 
     return knn if knn else None

@@ -21,3 +21,4 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 task-1 = "tasks.task_1.main:run"
+task-2 = "tasks.task_2.main:run"
